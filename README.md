@@ -1,5 +1,6 @@
 # name-initials
 
+A component that returns the name's initials
 
 ## Installation 
 ```sh
