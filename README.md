@@ -1,6 +1,6 @@
-# name-initials
+# full-name-initials
 
-A component that returns the name's initials
+A component that returns the fullname's initials
 
 ## Installation 
 ```sh
