@@ -1,0 +1,32 @@
+{
+  "name": "name-initials",
+  "version": "1.0.0",
+  "description": "Get name initials",
+  "main": "dist/index.js",
+  "types" : "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+	"test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gaabiriel/name-initials.git"
+  },
+  "keywords": [
+    "name",
+    "initials"
+  ],
+  "author": "Gabriel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gaabiriel/name-initials/issues"
+  },
+  "homepage": "https://github.com/Gaabiriel/name-initials#readme",
+  "devDependencies": {
+    "typescript": "^2.6.2"
+  },
+  "dependencies": {
+  "@types/pluralize": "0.0.27",
+    "pluralize": "^7.0.0"
+  }
+}
