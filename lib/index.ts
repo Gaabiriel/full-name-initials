@@ -27,35 +27,35 @@ import { ViewCell } from 'ng2-smart-table';
   }
   `],
   template: `
-  <span class="m-badge m-badge--brand m-badge--wide" attr.aria-label="{{value}}">{{iniciais}}</span>
+  <span class="m-badge m-badge--brand m-badge--wide" attr.aria-label="{{value}}">{{initials}}</span>
     `
 })
 export class BadgeNameInitialsComponent implements ViewCell, OnInit {
-    rowData: any;
+  rowData: any;
 
   @Input() value: string;
-  iniciais: string = "";
+  initials: string = "";
 
   ngOnInit() {
-    this.iniciais = this.getNameInitials(this.value);
+    this.initials = this.getNameInitials(this.value);
   }
-  //Pega as iniciais dos nomes.
-  getNameInitials(nomeCompleto: string): string {
 
-    if (nomeCompleto === null) { return ""; }
+  //Get names's initials
+  getNameInitials(fullName: string): string {
 
-    let nomeSeparado = nomeCompleto.split(" ");
+    if (fullName === null) { return ""; }
 
-    //limita para mostrar somente as 3 primeiras iniciais
-    let contador = nomeSeparado.length > 3 ? 3 : nomeSeparado.length;
+    let splitedName = fullName.split(" ");
+
+    //only show the first 3 initials
+    let contador = splitedName.length > 3 ? 3 : splitedName.length;
 
     for (let i = 0; i < contador; i++) {
-      //caso o nome tenha o 'de', o mesmo é ignorado
-      if (nomeSeparado[i].toUpperCase() != "DE") {
-        this.iniciais = this.iniciais + nomeSeparado[i].charAt(0).toUpperCase() + ".";
+      //if the name has "de" preposition, it's not considered
+      if (splitedName[i].toUpperCase() != "DE") {
+        this.initials = this.initials + splitedName[i].charAt(0).toUpperCase() + ".";
       }
     }
-
-    return this.iniciais;
+    return this.initials;
   }
 }
