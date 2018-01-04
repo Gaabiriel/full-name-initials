@@ -7,15 +7,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var NameInitialsComponent = /** @class */ (function () {
-    function NameInitialsComponent() {
+var BagdeNameInitialsComponent = /** @class */ (function () {
+    function BagdeNameInitialsComponent() {
         this.iniciais = "";
     }
-    NameInitialsComponent.prototype.ngOnInit = function () {
+    BagdeNameInitialsComponent.prototype.ngOnInit = function () {
         this.iniciais = this.getNameInitials(this.value);
     };
     //Pega as iniciais dos nomes.
-    NameInitialsComponent.prototype.getNameInitials = function (nomeCompleto) {
+    BagdeNameInitialsComponent.prototype.getNameInitials = function (nomeCompleto) {
         if (nomeCompleto === null) {
             return "";
         }
@@ -32,13 +32,13 @@ var NameInitialsComponent = /** @class */ (function () {
     };
     __decorate([
         core_1.Input()
-    ], NameInitialsComponent.prototype, "value", void 0);
-    NameInitialsComponent = __decorate([
+    ], BagdeNameInitialsComponent.prototype, "value", void 0);
+    BagdeNameInitialsComponent = __decorate([
         core_1.Component({
             styles: ["\n  span:hover {\n    position: relative;\n    cursor: default !important;\n  }\n  \n  span[aria-label]:hover:after {\n    content: attr(aria-label);\n    padding: 4px 8px;\n    position: absolute;\n    left: 0;\n    bottom: 100%;\n    white-space: nowrap;\n    font-size: 1rem;\n    border-radius: 30px;\n    color: grey;\n    background: white;\n    -webkit-box-shadow: 0px 1px 15px 1px rgba(113, 106, 202, 0.25);\n    -moz-box-shadow: 0px 1px 15px 1px rgba(113, 106, 202, 0.25);\n    box-shadow: 0px 1px 15px 1px rgba(113, 106, 202, 0.25); \n    border: rgb(116, 49, 49) 1px;\n    z-index: 100;\n  }\n  "],
             template: "\n  <span class=\"m-badge m-badge--brand m-badge--wide\" attr.aria-label=\"{{value}}\">{{iniciais}}</span>\n    "
         })
-    ], NameInitialsComponent);
-    return NameInitialsComponent;
+    ], BagdeNameInitialsComponent);
+    return BagdeNameInitialsComponent;
 }());
-exports.NameInitialsComponent = NameInitialsComponent;
+exports.BagdeNameInitialsComponent = BagdeNameInitialsComponent;
