@@ -30,7 +30,7 @@ import { ViewCell } from 'ng2-smart-table';
   <span class="m-badge m-badge--brand m-badge--wide" attr.aria-label="{{value}}">{{iniciais}}</span>
     `
 })
-export class BagdeNameInitialsComponent implements ViewCell, OnInit {
+export class BadgeNameInitialsComponent implements ViewCell, OnInit {
     rowData: any;
 
   @Input() value: string;

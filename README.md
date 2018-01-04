@@ -12,22 +12,22 @@ npm install metronic-badge-name-initials --save
 #### SharedComponent
 
 ```typescript
-import { BagdeNameInitialsComponent } from 'metronic-badge-name-initials';
+import { BadgeNameInitialsComponent } from 'metronic-badge-name-initials';
 
  declarations: [
-    BagdeNameInitialsComponent
+    BadgeNameInitialsComponent
   ],
   exports: [
-    BagdeNameInitialsComponent
+    BadgeNameInitialsComponent
   ], 
   entryComponents: [
-    BagdeNameInitialsComponent
+    BadgeNameInitialsComponent
   ],
  ```
  
 #### ExampleComponent
 ```typescript
-import { BagdeNameInitialsComponent } from 'metronic-badge-name-initials';
+import { BadgeNameInitialsComponent } from 'metronic-badge-name-initials';
 
 e.g:
  
@@ -37,7 +37,7 @@ e.g:
       example: {
         title: 'example',
         type: 'custom',
-        renderComponent: BagdeNameInitialsComponent
+        renderComponent: BadgeNameInitialsComponent
       },
  
 
