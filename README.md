@@ -11,9 +11,31 @@ npm install metronic-badge-name-initials --save
 
 ### Angular
 ```typescript
-import { getPlural } from 'mypluralize';
-console.log(getPlural('Goose'))
-console.log(getSingular('Guns'))
+In SharedComponent
+import { BagdeNameInitialsComponent } from 'metronic-badge-name-initials';
+
+ declarations: [
+    BagdeNameInitialsComponent
+  ],
+  exports: [
+  BagdeNameInitialsComponent
+  ], entryComponents: [
+  BagdeNameInitialsComponent
+  ],
+  
+In your Component
+import { BagdeNameInitialsComponent } from 'metronic-badge-name-initials';
+
+ex:
+ in ng2 smart table settings, inside collums add following code
+  columns: {
+      example: {
+        title: 'example',
+        type: 'custom',
+        renderComponent: BagdeNameInitialsComponent
+      },
+ 
+
 ```
 ```sh
 Output should be 'Geese'
