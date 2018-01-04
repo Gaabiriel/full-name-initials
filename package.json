@@ -1,5 +1,5 @@
 {
-  "name": "full-name-initials",
+  "name": "metronic-badge-name-initials",
   "version": "1.0.0",
   "description": "Get fullname initials",
   "main": "dist/index.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Gaabiriel/full-name-initials.git"
+    "url": "git+https://github.com/Gaabiriel/metronic-badge-name-initials.git"
   },
   "keywords": [
     "name",
@@ -19,16 +19,14 @@
   "author": "Gabriel",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Gaabiriel/full-name-initials/issues"
+    "url": "https://github.com/Gaabiriel/metronic-badge-name-initials/issues"
   },
-  "homepage": "https://github.com/Gaabiriel/full-name-initials#readme",
+  "homepage": "https://github.com/Gaabiriel/metronic-badge-name-initials#readme",
   "devDependencies": {
     "typescript": "^2.6.2"
   },
   "dependencies": {
     "@angular/core": "^5.1.3",
-    "@types/pluralize": "0.0.27",
-    "ng2-smart-table": "^1.2.2",
-    "pluralize": "^7.0.0"
+    "ng2-smart-table": "^1.2.2"
   }
 }
