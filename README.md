@@ -29,7 +29,7 @@ import { BagdeNameInitialsComponent } from 'metronic-badge-name-initials';
 ```typescript
 import { BagdeNameInitialsComponent } from 'metronic-badge-name-initials';
 
-ex:
+e.g:
  
  In ng2-smart-table settings
  
