@@ -1,4 +1,4 @@
-[![npm version](https://badge.fury.io/js/mypluralize.svg)](https://www.npmjs.com/package/metronic-badge-name-initials)
+[![npm version]](https://www.npmjs.com/package/metronic-badge-name-initials)
 
 # metronic-badge-name-initials
 
@@ -12,6 +12,7 @@ npm install metronic-badge-name-initials --save
 ### Angular
 ```typescript
 In SharedComponent
+
 import { BagdeNameInitialsComponent } from 'metronic-badge-name-initials';
 
  declarations: [
@@ -23,11 +24,13 @@ import { BagdeNameInitialsComponent } from 'metronic-badge-name-initials';
   BagdeNameInitialsComponent
   ],
   
-In your Component
+In ExampleComponent
+
 import { BagdeNameInitialsComponent } from 'metronic-badge-name-initials';
 
 ex:
- in ng2 smart table settings, inside collums add following code
+ in ng2-smart-table settings
+ 
   columns: {
       example: {
         title: 'example',
@@ -37,7 +40,4 @@ ex:
  
 
 ```
-```sh
-Output should be 'Geese'
-Output should be 'Gun'
-```
+
