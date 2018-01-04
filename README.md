@@ -30,7 +30,8 @@ import { BagdeNameInitialsComponent } from 'metronic-badge-name-initials';
 import { BagdeNameInitialsComponent } from 'metronic-badge-name-initials';
 
 ex:
- in ng2-smart-table settings
+ 
+ In ng2-smart-table settings
  
   columns: {
       example: {
