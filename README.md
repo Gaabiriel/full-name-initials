@@ -15,7 +15,7 @@ npm install metronic-badge-name-initials --save
 ```typescript
 import { BadgeNameInitialsComponent } from 'metronic-badge-name-initials';
 
- declarations: [
+  declarations: [
     BadgeNameInitialsComponent
   ],
   exports: [
