@@ -3,31 +3,46 @@ import { ViewCell } from 'ng2-smart-table';
 
 @Component({
   styles: [`
-  span:hover {
-    position: relative;
-    cursor: default !important;
+
+  /* Hover tooltips */
+  .field-tip {
+    position:relative;
   }
   
-  span[aria-label]:hover:after {
-    content: attr(aria-label);
-    padding: 4px 8px;
-    position: absolute;
-    left: 0;
-    bottom: 100%;
-    white-space: nowrap;
-    font-size: 1rem;
-    border-radius: 30px;
-    color: grey;
-    background: white;
-    -webkit-box-shadow: 0px 1px 15px 1px rgba(113, 106, 202, 0.25);
-    -moz-box-shadow: 0px 1px 15px 1px rgba(113, 106, 202, 0.25);
-    box-shadow: 0px 1px 15px 1px rgba(113, 106, 202, 0.25); 
-    border: rgb(116, 49, 49) 1px;
-    z-index: 100;
+  .field-tip .tip-content {
+    cursor: default !important;
+    position:absolute;
+    top:-10px; /* - top padding */
+    right:9999px;   
+    margin-left: auto; margin-right: 0;
+    padding:10px;
+    color:#fff;
+    width: 200px;
+    background:#333;
+      -webkit-box-shadow:2px 2px 5px #aaa;
+      -moz-box-shadow:2px 2px 5px #aaa; 
+    box-shadow:2px 2px 5px #aaa;
+    opacity:0;
+      -webkit-transition:opacity 250ms ease-out;
+      -moz-transition:opacity 250ms ease-out;
+      -ms-transition:opacity 250ms ease-out;
+      -o-transition:opacity 250ms ease-out;
+    transition:opacity 250ms ease-out;
+    z-index: 1000;
   }
+  
+  .field-tip:hover .tip-content {
+    right: -85px;
+    opacity: 1;
+    z-index: 1000;
+  }
+
   `],
   template: `
-  <span class="m-badge m-badge--brand m-badge--wide" attr.aria-label="{{value}}">{{initials}}</span>
+  <span class="m-badge m-badge--brand m-badge--wide field-tip">
+    {{iniciais}}
+    <span class="tip-content">{{value}}</span>
+  </span>
     `
 })
 export class BadgeNameInitialsComponent implements ViewCell, OnInit {

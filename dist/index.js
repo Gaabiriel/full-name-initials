@@ -35,8 +35,8 @@ var BadgeNameInitialsComponent = /** @class */ (function () {
     ], BadgeNameInitialsComponent.prototype, "value", void 0);
     BadgeNameInitialsComponent = __decorate([
         core_1.Component({
-            styles: ["\n  span:hover {\n    position: relative;\n    cursor: default !important;\n  }\n  \n  span[aria-label]:hover:after {\n    content: attr(aria-label);\n    padding: 4px 8px;\n    position: absolute;\n    left: 0;\n    bottom: 100%;\n    white-space: nowrap;\n    font-size: 1rem;\n    border-radius: 30px;\n    color: grey;\n    background: white;\n    -webkit-box-shadow: 0px 1px 15px 1px rgba(113, 106, 202, 0.25);\n    -moz-box-shadow: 0px 1px 15px 1px rgba(113, 106, 202, 0.25);\n    box-shadow: 0px 1px 15px 1px rgba(113, 106, 202, 0.25); \n    border: rgb(116, 49, 49) 1px;\n    z-index: 100;\n  }\n  "],
-            template: "\n  <span class=\"m-badge m-badge--brand m-badge--wide\" attr.aria-label=\"{{value}}\">{{initials}}</span>\n    "
+            styles: ["\n\n  /* Hover tooltips */\n  .field-tip {\n    position:relative;\n  }\n  \n  .field-tip .tip-content {\n    cursor: default !important;\n    position:absolute;\n    top:-10px; /* - top padding */\n    right:9999px;   \n    margin-left: auto; margin-right: 0;\n    padding:10px;\n    color:#fff;\n    width: 200px;\n    background:#333;\n      -webkit-box-shadow:2px 2px 5px #aaa;\n      -moz-box-shadow:2px 2px 5px #aaa; \n    box-shadow:2px 2px 5px #aaa;\n    opacity:0;\n      -webkit-transition:opacity 250ms ease-out;\n      -moz-transition:opacity 250ms ease-out;\n      -ms-transition:opacity 250ms ease-out;\n      -o-transition:opacity 250ms ease-out;\n    transition:opacity 250ms ease-out;\n    z-index: 1000;\n  }\n  \n  .field-tip:hover .tip-content {\n    right: -85px;\n    opacity: 1;\n    z-index: 1000;\n  }\n\n  "],
+            template: "\n  <span class=\"m-badge m-badge--brand m-badge--wide field-tip\">\n    {{iniciais}}\n    <span class=\"tip-content\">{{value}}</span>\n  </span>\n    "
         })
     ], BadgeNameInitialsComponent);
     return BadgeNameInitialsComponent;
