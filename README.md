@@ -10,22 +10,25 @@ npm install metronic-badge-name-initials --save
 ```
 
 ### Angular
-```typescript
-In SharedComponent
 
+# SharedComponent
+
+```typescript
 import { BagdeNameInitialsComponent } from 'metronic-badge-name-initials';
 
  declarations: [
     BagdeNameInitialsComponent
   ],
   exports: [
-  BagdeNameInitialsComponent
-  ], entryComponents: [
-  BagdeNameInitialsComponent
+    BagdeNameInitialsComponent
+  ], 
+  entryComponents: [
+    BagdeNameInitialsComponent
   ],
-  
-In ExampleComponent
-
+ ```
+ 
+# ExampleComponent
+```typescript
 import { BagdeNameInitialsComponent } from 'metronic-badge-name-initials';
 
 ex:
