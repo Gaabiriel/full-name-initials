@@ -4,7 +4,7 @@ A component that returns the fullname's initials
 
 ## Installation 
 ```sh
-npm install name-initials --save
+npm install full-name-initials --save
 ```
 ### TypeScript
 ```typescript
