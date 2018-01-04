@@ -1,4 +1,4 @@
-[![npm version](https://www.npmjs.com/package/metronic-badge-name-initials)](https://www.npmjs.com/package/metronic-badge-name-initials)
+[![npm version](https://badge.fury.io/js/metronic-badge-name-initials.svg)](https://badge.fury.io/js/metronic-badge-name-initials)
 
 # metronic-badge-name-initials
 
