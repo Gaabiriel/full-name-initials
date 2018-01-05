@@ -40,7 +40,7 @@ import { ViewCell } from 'ng2-smart-table';
   `],
   template: `
   <span class="m-badge m-badge--brand m-badge--wide field-tip">
-    {{iniciais}}
+    {{initials}}
     <span class="tip-content">{{value}}</span>
   </span>
     `
