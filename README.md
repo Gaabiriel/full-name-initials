@@ -44,3 +44,10 @@ e.g:
 
 ```
 
+## Output 
+
+![alt text](https://user-images.githubusercontent.com/35075988/34606806-ebed0ad0-f1f7-11e7-8613-86220f1d6414.png)
+
+After you hover the cursor on the name's initials in the table
+
+![alt text](https://user-images.githubusercontent.com/35075988/34606863-21e828e0-f1f8-11e7-8ddd-1abae0b19e38.png)
