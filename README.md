@@ -2,7 +2,7 @@
 
 # metronic-badge-name-initials
 
-A node.js component that return the name's initials
+A node.js module that return the name's initials
 
 ## Installation 
 ```sh
@@ -13,17 +13,14 @@ npm install metronic-badge-name-initials --save
 #### SharedComponent
 
 ```typescript
-import { BadgeNameInitialsComponent } from 'metronic-badge-name-initials';
+import { BadgeNameInitialsModule } from "metronic-badge-name-initials";
 
-  declarations: [
-    BadgeNameInitialsComponent
+  imports: [
+     BadgeNameInitialsModule
   ],
   exports: [
-    BadgeNameInitialsComponent
-  ], 
-  entryComponents: [
-    BadgeNameInitialsComponent
-  ],
+    BadgeNameInitialsModule
+  ]
  ```
  
 #### ExampleComponent
