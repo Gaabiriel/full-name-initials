@@ -1,7 +1,7 @@
 {
   "name": "metronic-badge-name-initials",
   "version": "2.0.4",
-  "description": "Get fullname initials",
+  "description": "Get names initials",
   "main": "bundles/badgenameinitials.umd.js",
   "module": "index.js",
   "typings": "index.d.ts",

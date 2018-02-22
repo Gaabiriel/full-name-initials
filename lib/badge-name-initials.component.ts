@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 
 
-const template = '<span class="m-badge m-badge--brand m-badge--wide field-tip">{{initials}}<span class="tip-content">{{value}}</span></span>';
+const template = '<span class="m-badge m-badge--brand m-badge--wide field-tip" [hidden]="isHidden">{{initials}}<span class="tip-content">{{value}}</span></span>';
 const style = `
   /* Hover tooltips */
   .field-tip {
@@ -48,7 +48,7 @@ export class BadgeNameInitialsComponent implements OnInit {
 
     @Input() value: string;
     initials: string = "";
-
+    isHidden: boolean;
     ngOnInit() {
         this.initials = this.getNameInitials(this.value);
     }
@@ -56,19 +56,30 @@ export class BadgeNameInitialsComponent implements OnInit {
     //Get names's initials
     getNameInitials(fullName: string): string {
 
-        if (fullName === null) { return ""; }
+        if (fullName === null || fullName === undefined || fullName === "") {
+            this.isHidden = true;
+            return "";
 
-        let splitedName = fullName.split(" ");
+        } else {
+            let splitedName = fullName.split(" ");
 
-        //only show the first 3 initials
-        let contador = splitedName.length > 3 ? 3 : splitedName.length;
+            //only show the first 3 initials
+            let contador = splitedName.length > 2 ? 2 : splitedName.length;
 
-        for (let i = 0; i < contador; i++) {
-            //if the name has "de" preposition, it's not considered
-            if (splitedName[i].toUpperCase() != "DE") {
-                this.initials = this.initials + splitedName[i].charAt(0).toUpperCase() + ".";
+            for (let i = 0; i < contador; i++) {
+                if (splitedName[i] != "") {
+                    //if the name has "de","dos","da" preposition, it's not considered
+                    if (splitedName[i].toUpperCase() != "DE" && splitedName[i].toUpperCase() != "DOS" && splitedName[i].toUpperCase() != "DA") {
+                        this.initials = this.initials + splitedName[i].charAt(0).toUpperCase() + "";
+                    } else {
+                        contador++;
+                    }
+                } else {
+                    contador++;
+                }
             }
+            this.isHidden = false;
+            return this.initials;
         }
-        return this.initials;
     }
 }
